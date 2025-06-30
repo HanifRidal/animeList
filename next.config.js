@@ -7,6 +7,14 @@ const nextConfig = {
       },
     ],
   },
+  experimental: {
+    optimizePackageImports: ["@phosphor-icons/react"],
+  },
 };
 
+// module.exports = {
+//   experimental: {
+//     optimizePackageImports: ["@phosphor-icons/react"],
+//   },
+// };
 export default nextConfig;
