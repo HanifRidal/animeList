@@ -13,16 +13,18 @@ const InputSearch = () => {
   };
 
   return (
-    <div className="relative">
-      <input
-        placeholder="Search..."
-        className="w-full bg-gray-200 p-2 rounded"
-        ref={searchRef}
-      />
-      <button className="absolute top-2 end-2" onClick={handleSearch}>
-        <MagnifyingGlass size={24} />
-      </button>
-    </div>
+    <form onSubmit={handleSearch}>
+      <div className="relative">
+        <input
+          placeholder="Search..."
+          className="w-full bg-gray-200 p-2 rounded"
+          ref={searchRef}
+        />
+        <button className="absolute top-2 end-2" onClick={handleSearch}>
+          <MagnifyingGlass size={24} />
+        </button>
+      </div>
+    </form>
   );
 };
 

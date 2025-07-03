@@ -11,11 +11,7 @@ const Page = async ({ params }) => {
   return (
     <>
       <section>
-        <Header
-          title={`Pencarian: ${keyword}`}
-          linkTitle="Lihat Selengkapnya"
-          linkHref="/popular"
-        />
+        <Header title={`Pencarian: ${keyword}`} />
         <AnimeList api={searchAnime} />
       </section>
     </>
