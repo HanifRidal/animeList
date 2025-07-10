@@ -1,7 +1,11 @@
 @import "tailwindcss";
-/* @import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities"; */
+
+@theme {
+  --color-primary: #eeee;
+  --color-accent: #ffc639;
+  --color-secondary: #393e39;
+  --color-dark: #222831;
+}
 
 *,
 *::before,

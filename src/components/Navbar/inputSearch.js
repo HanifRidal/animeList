@@ -6,25 +6,27 @@ import { useRef } from "react";
 const InputSearch = () => {
   const searchRef = useRef();
   const router = useRouter();
+
   const handleSearch = (event) => {
-    event.preventDefault();
-    const keyword = searchRef.current.value;
-    router.push(`/search/${keyword}`);
+    if (event.key === "Enter" || event.type === "click") {
+      event.preventDefault();
+      const keyword = searchRef.current.value;
+      router.push(`/search/${keyword}`);
+    }
   };
 
   return (
-    <form onSubmit={handleSearch}>
-      <div className="relative">
-        <input
-          placeholder="Search..."
-          className="w-full bg-gray-200 p-2 rounded"
-          ref={searchRef}
-        />
-        <button className="absolute top-2 end-2" onClick={handleSearch}>
-          <MagnifyingGlass size={24} />
-        </button>
-      </div>
-    </form>
+    <div className="relative">
+      <input
+        placeholder="Search..."
+        className="w-full bg-gray-200 p-2 rounded"
+        ref={searchRef}
+        onKeyDown={handleSearch}
+      />
+      <button className="absolute top-2 end-2" onClick={handleSearch}>
+        <MagnifyingGlass size={24} />
+      </button>
+    </div>
   );
 };
 
