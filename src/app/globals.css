@@ -16,10 +16,6 @@
 }
 
 img {
-  /* max-width: 100%;
-  min-height: 300px;
-  max-height: 350px;
-  height: auto; */
   transition: 0.3s ease all;
   -webkit-transition: 0.3s ease all;
   -moz-transition: 0.3s ease all;
@@ -29,4 +25,19 @@ img {
 
 img:hover {
   transform: scale(1.02);
+}
+
+.loading {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: radial-gradient(farthest-side, #ffc639 95%, #0000) 50% 1px/24px
+      24px no-repeat,
+    radial-gradient(farthest-side, #0000 calc(100% - 28px), #eeee 0);
+  animation: s9 1s infinite linear;
+}
+@keyframes s9 {
+  to {
+    transform: rotate(1turn);
+  }
 }

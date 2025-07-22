@@ -11,6 +11,7 @@ const InputSearch = () => {
     if (event.key === "Enter" || event.type === "click") {
       event.preventDefault();
       const keyword = searchRef.current.value;
+      if (!keyword.trim()) return;
       router.push(`/search/${keyword}`);
     }
   };
@@ -24,7 +25,7 @@ const InputSearch = () => {
         onKeyDown={handleSearch}
       />
       <button className="absolute top-2 end-2" onClick={handleSearch}>
-        <MagnifyingGlass size={24} />
+        <MagnifyingGlass size={24} className="hover:cursor-pointer" />
       </button>
     </div>
   );
